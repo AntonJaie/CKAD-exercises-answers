@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  labels:
+    run: nginx
+  name: nginx-2
+  namespace: mynamespace
+spec:
+  containers:
+  - image: nginx
+    imagePullPolicy: Always
+    name: nginx

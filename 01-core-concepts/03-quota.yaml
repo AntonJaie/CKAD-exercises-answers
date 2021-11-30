@@ -1,0 +1,12 @@
+#kubectl create quota myrq --hard=cpu=1,memory=1G,pod=2 --dry-run=client -o yaml
+apiVersion: v1
+kind: ResourceQuota
+metadata:
+  creationTimestamp: null
+  name: myrq
+spec:
+  hard:
+    cpu: "1"
+    memory: 1G
+    pods: "2"
+status: {}
